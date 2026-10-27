@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://busan-waste.vercel.app/sitemap-index.xml
+Sitemap: https://www.xn--ok0bl1wxvbj3ep16a.com/sitemap-index.xml
