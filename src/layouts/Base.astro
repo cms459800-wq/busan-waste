@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 const {title='부산폐기물 | 부산 건설·인테리어·철거폐기물 수거 상담',description='부산 건설폐기물, 인테리어 철거잔재, 상가·사무실·창고 폐기물 수거 상담. 부산 16개 구·군 지역별 현장 여건에 맞춰 안내합니다.',breadcrumbs=[]}=Astro.props;
-const canonical=new URL(Astro.url.pathname,Astro.site??'https://busan-waste.vercel.app');
+const canonical=new URL(Astro.url.pathname,Astro.site??'https://www.xn--ok0bl1wxvbj3ep16a.com');
 canonical.search='';canonical.hash='';
 const websiteSchema=Astro.url.pathname==='/'?{'@context':'https://schema.org','@type':'WebSite',name:'부산폐기물',url:new URL('/',canonical).href,inLanguage:'ko-KR'}:null;
 const breadcrumbSchema=breadcrumbs.length>0?{'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{ '@type':'ListItem',position:1,name:'홈',item:new URL('/',canonical).href},...breadcrumbs.map((item,index)=>({'@type':'ListItem',position:index+2,name:item.name,item:new URL(item.path,canonical).href}))]}:null;
