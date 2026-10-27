@@ -8,7 +8,7 @@ import {districtGuides} from '../../../data/districtGuides';
 export function getStaticPaths(){return Object.entries(neighborhoods).flatMap(([district,names])=>names.map(name=>({params:{district,name},props:{district,name}})));}
 const {district,name}=Astro.props;
 const guide=districtGuides[district];
-const nearby=(neighborhoods[district]??[]).filter(n=>n!==name).slice(0,6);
+const nearby=(neighborhoods[district]??[]).filter(n=>n!==name);
 const neighborhoodIndex=(neighborhoods[district]??[]).indexOf(name);
 const topic=guide.examples[Math.max(0,neighborhoodIndex)%guide.examples.length];
 const fieldQuestions=[{q:`${name} 현장 사진은 무엇을 보내야 하나요?`,a:`${district} ${name} 현장의 폐기물 전체 모습, 품목별 근접 사진, 출입구와 차량 접근로 사진을 보내주시면 상담에 도움이 됩니다.`},{q:`${name}에서 차량 진입이 어려우면 어떻게 하나요?`,a:`${guide.check} 현장 층수와 이동 거리, 주차 위치를 알려주시면 반출 방식의 가능 여부를 확인합니다.`},{q:`${name} 폐기물 견적은 어떤 조건에 따라 달라지나요?`,a:'폐기물 종류와 물량, 분리 상태, 운반 거리, 층수와 장비 투입 여부에 따라 달라질 수 있습니다. 사진 상담은 확정 견적이 아닙니다.'}];
