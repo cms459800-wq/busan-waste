@@ -11,7 +11,7 @@ const guide=districtGuides[district];
 const nearby=(neighborhoods[district]??[]).filter(n=>n!==name);
 const neighborhoodIndex=(neighborhoods[district]??[]).indexOf(name);
 const topic=guide.examples[Math.max(0,neighborhoodIndex)%guide.examples.length];
-const fieldQuestions=[{q:`${name} 현장 사진은 무엇을 보내야 하나요?`,a:`${district} ${name} 현장의 폐기물 전체 모습, 품목별 근접 사진, 출입구와 차량 접근로 사진을 보내주시면 상담에 도움이 됩니다.`},{q:`${name}에서 차량 진입이 어려우면 어떻게 하나요?`,a:`${guide.check} 현장 층수와 이동 거리, 주차 위치를 알려주시면 반출 방식의 가능 여부를 확인합니다.`},{q:`${name} 폐기물 견적은 어떤 조건에 따라 달라지나요?`,a:'폐기물 종류와 물량, 분리 상태, 운반 거리, 층수와 장비 투입 여부에 따라 달라질 수 있습니다. 사진 상담은 확정 견적이 아닙니다.'}];
+const fieldQuestions=[{q:`${name} 현장 사진은 무엇을 보내야 하나요?`,a:`부산 ${district} ${name} 현장의 전체 모습, 품목별 근접 사진, 출입구와 차량 접근로를 각각 촬영해 주세요. 주소나 차량번호 등 불필요한 개인정보는 가린 뒤 전달해 주세요.`},{q:`${name}에서 차량 진입이 어려우면 어떻게 하나요?`,a:`${guide.check} 층수, 엘리베이터 사용 가능 여부, 계단 폭, 주차 위치와 반출 거리를 알려주시면 작업 가능 여부를 확인하는 데 도움이 됩니다.`},{q:`${name} 폐기물 견적은 어떤 조건에 따라 달라지나요?`,a:'폐기물 종류·물량·분리 상태·운반 거리·층수·장비 투입 여부 등에 따라 달라집니다. 사진만으로 안내하는 금액은 현장 확인 전 확정 견적이 아닙니다.'},{q:`${name}에서 수거 일정은 어떻게 상담하나요?`,a:'희망 날짜와 작업 가능한 시간대, 건물 출입 및 주차 제한 시간을 함께 알려주세요. 실제 일정은 작업 여건과 수거 가능 여부를 확인한 후 조율합니다.'}];
 const localTitle=`부산 ${district} ${name} 폐기물수거 | ${topic} 현장 안내 - 부산폐기물`;
 const itemTips=[`품목과 혼합 상태를 사진으로 구분해 주세요. ${guide.check}`,`반출 시간과 이동 동선을 확인해 주세요. ${guide.tip}`,`예상 물량과 장비 진입 조건을 확인해 주세요. ${guide.check}`];
 const localDescription=`부산 ${district} ${name} 폐기물수거 안내. ${topic} 현장의 폐기물 종류·예상 물량·작업 층수·차량 접근 조건을 확인하고 사진 견적 상담을 준비하세요.`;
