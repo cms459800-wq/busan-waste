@@ -25,7 +25,7 @@
 
 .neighborhood-extra{margin-top:38px}.neighborhood-extra h2{margin:35px 0 20px}.neighborhood-extra .faq-list{max-width:900px}.neighborhood-extra .district-grid{margin-top:20px}.local-guide .eyebrow{display:inline-block;margin-bottom:10px}@media(max-width:760px){.neighborhood-extra{margin-top:24px}.neighborhood-extra h2{font-size:23px;line-height:1.45;margin:27px 0 15px}}
 
-:where(a,button,input,select,textarea,summary):focus-visible{outline:3px solid #ffb703;outline-offset:3px}section[id]{scroll-margin-top:90px}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+:where(a,button,input,select,textarea,summary):focus-visible{outline:3px solid #ffb703;outline-offset:3px}section[id],#local-faq{scroll-margin-top:90px}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 
 /* Small-screen quote form: avoid clipped select labels and cramped actions */
 @media(max-width:480px){.quote-form-grid{grid-template-columns:minmax(0,1fr);gap:14px}.quote-form select,.quote-form textarea{font-size:16px;min-width:0;padding:13px}.quote-form-head{flex-wrap:wrap;gap:5px}.quote-form-head small{max-width:none;text-align:left}.quote-actions{display:grid;grid-template-columns:minmax(0,1fr)}.quote-actions .btn{width:100%;text-align:center;justify-content:center}.quote-result pre{font-size:13px;line-height:1.8}}
