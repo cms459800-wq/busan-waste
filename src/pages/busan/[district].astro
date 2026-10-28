@@ -10,7 +10,7 @@ const {district}=Astro.props;
 const guide=districtGuides[district];
 const focus=guide.focus;
 const localTitle=`부산 ${district} 폐기물수거 | ${guide.focus} 상담 - 부산폐기물`;
-const localDescription=`부산 ${district} 폐기물수거 상담. ${guide.focus} 현장의 폐기물 종류·물량과 차량 접근 조건을 확인합니다. ${guide.tip}`;
+const localDescription=`부산 ${district} 폐기물수거 안내. ${guide.focus} 현장의 수거 품목·예상 물량·반출 동선·차량 접근 조건을 확인하고 사진 견적 상담을 준비하세요.`;
 const exampleNotes=['현장 상황에 따라 수거 대상 품목과 분리할 물품을 먼저 확인해 주세요.','품목별 수량과 예상 부피를 구분해 사진으로 기록해 주세요.','출입구, 반출 경로와 차량 정차 가능 위치를 확인해 주세요.'];
 ---
 <Base breadcrumbs={[{name:'부산 '+district,path:'/busan/'+encodeURIComponent(district)}]} title={localTitle} description={localDescription}>
